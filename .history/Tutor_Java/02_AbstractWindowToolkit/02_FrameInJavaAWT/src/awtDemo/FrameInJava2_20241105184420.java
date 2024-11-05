@@ -11,13 +11,9 @@ public class FrameInJava2 extends Frame {
     public FrameInJava2() {
         super("Tutor Joes");
         setLayout(null);
-        
-        // Create button and set its position
         btn = new Button("Click Me");
         btn.setBounds(75, 75, 200, 50); // X, Y, width, height
         add(btn);
-        
-        // Set frame properties
         setSize(1000, 600);
         setVisible(true);
         
@@ -31,7 +27,10 @@ public class FrameInJava2 extends Frame {
     }
 
     public static void main(String[] args) {
-        // Direct instantiation, no need for @SuppressWarnings
-        new FrameInJava2(); // Create and display the frame
+        @SuppressWarnings("unused")
+        FrameInJava2 frm = new FrameInJava2(); // Store the instance
+        // You can call any method on frm here if needed.
+        // For instance, if you had a method to change the button's label:
+        // frm.changeButtonLabel("New Label");
     }
 }
